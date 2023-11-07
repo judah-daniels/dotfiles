@@ -41,5 +41,6 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 
 ## How to use
 
+- Run `install.sh` from this git directory to install brew, and install a bunchhh of programs. See the Brewfile to see what will be installed. 
 - Run `setup.sh` from this git directory to set everything up. Please check this script first and note that it will overwrite existing configuration!. **Be Careful**.
 
