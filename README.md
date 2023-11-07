@@ -4,6 +4,7 @@
 
 - Vim (NeoVim) config
 - Tmux config
+- Iterm2 config
 - Git config
 - Zsh config
 

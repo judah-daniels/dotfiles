@@ -4,6 +4,8 @@ tap "sidneys/homebrew"
 tap "zegervdv/zathura"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# Nice terminal
+brew "iterm2"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Framework for layout and rendering of i18n text
