@@ -79,3 +79,22 @@ export GPG_TTY=$(tty)
 
 # Initialise Starship
 eval "$(starship init zsh)"
+
+# Command to switch iterm2 theeme
+function theme-switch {
+ echo -e "\033]50;SetProfile=$1\a"
+ export ITERM_PROFILE=$1
+ if [ $1 = "dark" ]; then
+    dark-mode on 2> /dev/null # Prevent error message if dark-mode is not installed
+    if tmux info &> /dev/null; then
+        tmux set-environment ITERM_PROFILE dark
+        # tmux source-file ~/.tmux/plugins/tmux-colors-solarized/tmuxcolors-dark.conf
+    fi
+ else
+    dark-mode off 2> /dev/null
+    if tmux info &> /dev/null; then
+        tmux set-environment ITERM_PROFILE light
+        # tmux source-file ~/.tmux/plugins/tmux-colors-solarized/tmuxcolors-light.conf
+    fi
+ fi
+}
