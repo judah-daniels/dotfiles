@@ -21,10 +21,11 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 
 ## Shell setup (macOS & Linux)
 
-- [zsh](https://ohmyz.sh/) - Shell
+- [oh-my-zsh](https://ohmyz.sh/) - Shell with nice features.
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use FuraMono.
 - [z](https://github.com/jethrokuan/z) - Directory jumping
 - [fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
+- [starship](https://starship.rs/) - Beautiful Shell
 
 ## Tmux config
 - Tokyo-night theme
@@ -39,3 +40,4 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 - Shortcuts such as `gcl` for `git clone`.
 
 ## How to use
+

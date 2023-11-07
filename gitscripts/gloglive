@@ -1,0 +1,3 @@
+#!/bin/bash
+
+watch -cwt unbuffer git --no-pager log --graph --pretty=oneline --abbrev-commit --decorate --all $*
