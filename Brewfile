@@ -180,6 +180,8 @@ brew "zegervdv/zathura/girara", args: ["HEAD"]
 brew "zegervdv/zathura/zathura", args: ["HEAD"]
 # Poppler backend plugin for zathura
 brew "zegervdv/zathura/zathura-pdf-poppler"
+# Nice ls replacement
+brew "eza"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
