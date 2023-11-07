@@ -13,21 +13,11 @@ ZSH_THEME="robbyrussell"
 # iterm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
-
-export NVIM_HOME=/Users/Judah/.config/nvim
+export NVIM_HOME="${HOME}/.config/nvim"
 
 plugins=(git thefuck tmux zsh-syntax-highlighting vi-mode zsh-autosuggestions z)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -36,29 +26,26 @@ else
   export EDITOR='nvim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
+# Aliases
 alias vim="nvim"
 alias n="nvim"
 
 alias ls="ls --color=auto"
-alias vim="nvim"
 
+# Haskell aliases
 alias st="stack test"
 alias sb="stack build"
 
+# Open zathura
 function za() { command zathura $* & disown }
 
+# Nice Git log
 alias glog="git log --all --graph --decorate --oneline"
 
-[ -f "/Users/judah/.ghcup/env" ] && source "/Users/judah/.ghcup/env" # ghcup-env
+# Set-up haskel ghcup environment
+[ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env" # ghcup-env
 
+# Type "fuck" in the terminal to correct your previous command
 eval $(thefuck --alias)
 
 # VIM bindings
@@ -72,4 +59,20 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source $(brew --prefix nvm)/nvm.sh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Pyenv setup to manage python environment
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+
+# Rbenv setup to manage ruby environment
+eval "$(rbenv init - zsh)"
+
+# Set up GPG to sign commits
+gpg-connect-agent /bye
+
+export GPG_TTY=$(tty)
