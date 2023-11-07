@@ -76,3 +76,6 @@ eval "$(rbenv init - zsh)"
 gpg-connect-agent /bye
 
 export GPG_TTY=$(tty)
+
+# Initialise Starship
+eval "$(starship init zsh)"
