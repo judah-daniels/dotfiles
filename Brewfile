@@ -130,8 +130,6 @@ brew "nmap"
 brew "node@16"
 # Development kit for the Java programming language
 brew "openjdk@11"
-# Tool for creating identical machine images for multiple platforms
-brew "packer"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
@@ -144,8 +142,6 @@ brew "pre-commit", link: false
 brew "pulseaudio"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
-# File browser
-brew "ranger"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Sample multi-channel audio mixer library
@@ -156,8 +152,6 @@ brew "spago"
 brew "sphinx-doc"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Haskell code prettifier
-brew "stylish-haskell"
 # User interface to the TELNET protocol
 brew "telnet"
 # OCR (Optical Character Recognition) engine
@@ -186,8 +180,6 @@ brew "zegervdv/zathura/zathura", args: ["HEAD"]
 brew "zegervdv/zathura/zathura-pdf-poppler"
 # Enable Windows-like alt-tab
 cask "alt-tab"
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
 # PDF file editor
