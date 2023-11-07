@@ -188,11 +188,9 @@ cask "combine-pdfs"
 cask "detexify"
 # Developer platform
 cask "dotnet-sdk"
-# Minimal installer for conda
-cask "miniconda"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # PDF reader and note-taking application
 cask "skim"
-# Multimedia player
-cask "vlc"
+# UNIX shell (command interpreter)
+brew "zsh"
