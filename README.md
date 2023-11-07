@@ -41,3 +41,5 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 
 ## How to use
 
+- Run `setup.sh` from this git directory to set everything up. Please check this script first and note that it will overwrite existing configuration!. **Be Careful**.
+
