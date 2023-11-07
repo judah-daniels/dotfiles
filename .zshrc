@@ -30,7 +30,7 @@ fi
 alias vim="nvim"
 alias n="nvim"
 
-alias ls="ls --color=auto"
+alias ls="eza"
 
 # Haskell aliases
 alias st="stack test"
