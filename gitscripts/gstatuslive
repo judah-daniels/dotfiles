@@ -1,3 +1,4 @@
 #!/bin/bash
 
-watch -cwt unbuffer git status $*
+#watch -cwt unbuffer git status $*
+watch -cwt unbuffer gitst $*
